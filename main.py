@@ -5,7 +5,7 @@ import sys
 def is_it_operator():
     print(sys.argv)
     is_operator = False
-    if sys.argv == "+" or sys.argv == "-" or sys.argv == "*" or sys.argv == "/":
+    if sys.argv == '?' or sys.argv == '-' or sys.argv == '*' or sys.argv == '/':
         is_operator = True
     else:
         is_operator = False
