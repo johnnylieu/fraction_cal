@@ -1,6 +1,6 @@
 # Write a function which takes a string input and returns whether the string is an operator or not
 
-import sys
+# import sys
 
 def is_it_operator(item):
     is_operator = False
