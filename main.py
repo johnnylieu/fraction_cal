@@ -7,7 +7,6 @@ def is_it_operator():
     is_operator = False
     if sys.argv == '+' or sys.argv == '-' or sys.argv == '*' or sys.argv == '/':
         is_operator = True
-    
     print(is_operator)
 
 is_it_operator()
