@@ -31,8 +31,12 @@ def is_it_operator(item):
     print(f"{item} is an operator: {is_operator}")
     filtered_input = [x for x in input if x!="+" if x!="-" if x!="*" if x!= "/"]
     print(f"filtered list: {filtered_input}")
-    add = sum(filtered_input)
-    print(f"sum of input is: {add}")
+    total = Fraction(0)
+    for i in filtered_input:
+        i = Fraction(i)
+        print(i)
+        total = total + i
+        print(f"total sum is: {total}")
 
 is_it_operator(input)
 
