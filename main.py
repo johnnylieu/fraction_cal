@@ -36,7 +36,7 @@ def is_it_operator(item):
         i = Fraction(i)
         print(i)
         total = total + i
-        print(f"total sum is: {total}")
+    print(f"total sum is: {total}")
 
 is_it_operator(input)
 
