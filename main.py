@@ -2,15 +2,14 @@
 
 import sys
 
-string = sys.argv[1] + " " + sys.argv[2] + " " + sys.argv[3] + " " + sys.argv[4]
-string = string.split()
-print(string)
+def is_it_operator():
+    print(sys.argv)
+    is_operator = False
+    if sys.argv == "+" or sys.argv == "-" or sys.argv == "*" or sys.argv == "/":
+        is_operator = True
+    else:
+        is_operator = False
+    
+    print(is_operator)
 
-def string_or_not():
-    for i in string:
-        if i == "+" or string == "-" or string == "*" or string == "/":
-            print("string has an operator")
-        else:
-            print("string has no operator")
-
-string_or_not()
+is_it_operator()
