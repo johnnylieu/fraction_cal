@@ -13,3 +13,9 @@ is_it_operator("/")
 is_it_operator("5")
 is_it_operator(3)
 is_it_operator("T")
+
+    # print(f"sys argvs: {sys.argv}") # works
+    # is_operator = False
+    # if sys.argv[3] == '+' or sys.argv[3] == '-' or sys.argv[3] == '*' or sys.argv[3] == '/':
+    #     is_operator = True
+    # print(is_operator)
