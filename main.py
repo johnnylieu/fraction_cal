@@ -12,9 +12,6 @@
 # ? 2_3/8 + 9/8
 # = 3_1/2
 
-# We recommend that you include test cases and unit tests. When you're done please email us a link to a GitHub repository, etc.
-# We'd also love if you could share an ETA when you get the chance. Look forward to seeing what you can come up with for us.
-
 # return integer first
 # look into % (modular) for fraction
 # remainder/denominator
