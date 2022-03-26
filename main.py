@@ -1,0 +1,1 @@
+# Write a function which takes a string input and returns whether the string is an operator or not
