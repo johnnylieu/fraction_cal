@@ -25,12 +25,12 @@ def get_num1_and_num2():
 
     num2 = num2_fraction + num2_whole_number
     num2 = [x for x in num2 if x!= "0"]
-    print(f"num1: {num2}")
+    print(f"num2: {num2}")
     if len(num2) == 1:
         num2 = Fraction(num2[0]) + Fraction(0)
     else:
         num2 = Fraction(num2[0]) + Fraction(num2[1])
-    print(f"num1: {num2}")
+    print(f"num2: {num2}")
 
     if sys.argv[3] == "+":
         sum = num1 + num2
@@ -79,10 +79,13 @@ def get_num1(num1):
             whole_number = num1[i-1]
             # print(f"whole number: {whole_number}")
             num1_whole_number.append(whole_number)
-            # print(f"whole_num1: {num1_whole_number}")
-        else:
-            num1_whole_number.append(sys.argv[2])
-            # print(f"whole_num2: {num2_whole_number}")
+            print(f"whole_num1: {num1_whole_number}")
+        elif num1[i] != "_" and num1[i]!= "/":
+            num1_whole_number.append("0")
+            print(f"whole_num1: {num1_whole_number}")
+        # else:
+        #     num1_whole_number.append(sys.argv[4])
+        #     print(f"whole_num2: {num2_whole_number}")
 
 def get_num2(num2):
     num2 = split(num2)
@@ -92,10 +95,13 @@ def get_num2(num2):
             whole_number = num2[i-1]
             # print(f"whole number: {whole_number}")
             num2_whole_number.append(whole_number)
-            # print(f"whole_num2: {num2_whole_number}")
-        else:
-            num2_whole_number.append(sys.argv[4])
-            # print(f"whole_num2: {num2_whole_number}")
+            print(f"whole_num2: {num2_whole_number}")
+        elif num2[i] != "_" and num2[i]!= "/":
+            num2_whole_number.append("0")
+            print(f"whole_num2: {num2_whole_number}")
+        # else:
+        #     num2_whole_number.append(sys.argv[4])
+        #     print(f"whole_num2: {num2_whole_number}")
 
 if __name__ == "__main__":
     get_num1(sys.argv[2])
