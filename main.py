@@ -16,12 +16,9 @@
 # look into % (modular) for fraction
 # remainder/denominator
 
-from __future__ import division
-from ast import operator
 from fractions import *
 from operator import *
 from operator import *
-from os import times
 # help(operator)
 # dir(operator)
 
