@@ -40,15 +40,17 @@ num2_whole_number = []
 num2_fraction = []
 
 def add():
-    if sys.argv[3] == "+":
-        sum = Fraction((num1_fraction + num1_whole_number) +(num2_whole_number + num2_fraction))
-        print(f"= {sum}")
+    num1 = Fraction(num1_whole_number) + Fraction(num1_fraction)
+    print(f"num1: {num1}")
+    num2 = Fraction(num2_whole_number) + Fraction(num2_fraction)
+    print(f"num2: {num2}")
+    # print(f"= {sum}")
 
-# def is_it_operator(item):
-#     is_operator = False
-#     if item == '+' or item == '-' or item == '*' or item == '/':
-#         is_operator = True
-#     print(f"{item} is an operator: {is_operator}")
+def is_it_operator(item):
+    is_operator = False
+    if item == '+' or item == '-' or item == '*' or item == '/':
+        is_operator = True
+    print(f"{item} is an operator: {is_operator}")
 
 def split(word):
     return [char for char in word]
@@ -61,7 +63,7 @@ def get_fract1(fract1):
             fraction1 = fract1[i-1] + "/" + fract1[i+1]
             # print(f"fraction1: {fraction1}") # works
             num1_fraction.append(fraction1)
-            # print(f"num1 fraction: {num1_fraction}") # works
+            print(f"num1 fraction: {num1_fraction}") # works
 
 def get_fract2(fract2):
     fract2 = split(fract2)
@@ -71,8 +73,7 @@ def get_fract2(fract2):
             fraction1 = fract2[i-1] + "/" + fract2[i+1]
             # print(f"fraction1: {fraction1}") # works
             num2_fraction.append(fraction1)
-            # print(f"num2 fraction: {num2_fraction}") # works
-
+            print(f"num2 fraction: {num2_fraction}") # works
 
 def get_num1(num1):
     num1 = split(num1)
@@ -98,16 +99,16 @@ def get_num2(num2):
             # print(f"whole_num2: {num2_whole_number}")
         else:
             num1_whole_number.append("0")
-            print(f"whole_num1: {num1_whole_number}")
+            print(f"whole_num2: {num2_whole_number}")
 
-# if __name__ == "__main__":
-#     get_num1(sys.argv[2])
-#     get_num2(sys.argv[4])
-#     get_fract1(sys.argv[2])
-#     get_fract2(sys.argv[4])
+if __name__ == "__main__":
+    get_num1(sys.argv[2])
+    get_num2(sys.argv[4])
+    get_fract1(sys.argv[2])
+    get_fract2(sys.argv[4])
 
-#     if sys.argv[3] == "+":
-#         add()
+    if sys.argv[3] == "+":
+        add()
 
 
 
