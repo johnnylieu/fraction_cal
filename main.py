@@ -16,7 +16,12 @@
 # look into % (modular) for fraction
 # remainder/denominator
 
+from ast import operator
 from fractions import *
+from operator import *
+from operator import *
+# help(operator)
+# dir(operator)
 
 input = ["3.9", "+", "6.8", "-", "1.3"]
 
@@ -26,18 +31,30 @@ def is_it_operator(item):
         is_operator = True
     print(f"{item} is an operator: {is_operator}")
 
-def add():
-    filtered_input = [x for x in input if x!="+" if x!="-" if x!="*" if x!= "/"]
-    print(f"filtered input: {filtered_input}")
-    total = Fraction(0)
-    for i in filtered_input:
-        i = Fraction(i)
-        print(i)
-        total = total + i
-    print(f"total sum is: {total}")
+def total(num1, num2, op):
+    if op == "+":
+        sum = float(num1) + float(num2)
+        print(f"the sum is: {sum}")
+    elif op == "-":
+        diff = float(num1) - float(num2)
+        print(f"the diff is: {diff}")
+    elif op == "*":
+        mult = float(num1) * float(num2)
+        print(f"the multiplicatio is: {mult}")
+    elif op == "/":
+        div = float(num1) / float(num2)
+        print(f"the division is: {div}")
+    elif op != "+" or op != "-" or op != "*" or op != "/":
+        print(f"Please choose a valid operand (+, *, -, /)")
+    else:
+        pass
 
 # is_it_operator()
-add()
+total("3.9", "2.1", "+")
+total("2.1", "3.9", "-")
+total("4", "12", "*")
+total("12", "4", "/")
+total("12", "4", "4")
 
     # print(f"sys argvs: {sys.argv}") # works
     # is_operator = False
