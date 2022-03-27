@@ -19,8 +19,13 @@
 from fractions import *
 from operator import *
 from operator import *
+import sys
 # help(operator)
 # dir(operator)
+
+# Now is the time you write the loop to go through each item
+# Here is a hint. Initialize a variable `sum` to 0.0. Start iterating from the beginning. Check if it is a num. Reuse the function here. If it is an operator, you can continue
+# Otherwise, if it is a number, do total(sum, the number at the current index, operation at index - 1)
 
 def is_it_operator(item):
     is_operator = False
@@ -29,6 +34,7 @@ def is_it_operator(item):
     print(f"{item} is an operator: {is_operator}")
 
 def total(num1, num2, operand):
+    is_it_operator(operand)
     if operand == "+":
         return float(num1) + float(num2)
     elif operand == "-":
@@ -37,15 +43,36 @@ def total(num1, num2, operand):
         return float(num1) * float(num2)
     elif operand == "/":
         return float(num1) / float(num2)
-    elif operand != "+" or operand != "-" or operand != "*" or operand != "/":
-        return(f"Please choose a valid operand (+, *, -, /)")
 
-# is_it_operator()
-print(total("3.9", "2.1", "+"))
-print(total("2.1", "3.9", "-"))
-print(total("4", "12", "*"))
-print(total("12", "4", "/"))
-print(total("12", "4", "4"))
+def loop(item):
+    sum = 0.0
+    sum_list = []
+    for i in range(len(item)-1):
+        print(item[i])
+        if is_it_operator(item[i]) == None:
+            sum_list.append(item[i])
+            print(sum_list)
+            sum = float(sum) + float(item[i])
+            print(f"sum: {sum}")
+        elif is_it_operator(item[i]) == True:
+            continue
+
+# input = ["3.9", "+", "6.8", "-", "1.3"]
+input = ["3.9", "2.1", "+"]
+loop(input)
+
+# print(total("3.9", "2.1", "+"))
+# print(total("2.1", "3.9", "-"))
+# print(total("4", "12", "*"))
+# print(total("12", "4", "/"))
+# print(total("12", "4", "4"))
+
+# is_it_operator("+")
+# is_it_operator("-")
+# is_it_operator("*")
+# is_it_operator("/")
+# is_it_operator("4")
+
 
     # print(f"sys argvs: {sys.argv}") # works
     # is_operator = False
