@@ -16,6 +16,7 @@
 # look into % (modular) for fraction
 # remainder/denominator
 
+from __future__ import division
 from ast import operator
 from fractions import *
 from operator import *
@@ -43,8 +44,8 @@ def total(num1, num2, operand):
         times = float(num1) * float(num2)
         print(f"the times is: {times}")
     elif operand == "/":
-        dividend = float(num1) / float(num2)
-        print(f"the dividend is: {dividend}")
+        division = float(num1) / float(num2)
+        print(f"the division is: {division}")
     elif operand != "+" or op != "-" or op != "*" or op != "/":
         print(f"Please choose a valid operand (+, *, -, /)")
 
