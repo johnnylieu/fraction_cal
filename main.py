@@ -34,7 +34,7 @@ def total(num1, num2, operand):
         print(f"the sum is: {sum}")
     elif operand == "-":
         difference = float(num1) - float(num2)
-        print(f"the diff is: {difference}")
+        print(f"the difference is: {difference}")
     elif operand == "*":
         times = float(num1) * float(num2)
         print(f"the times is: {times}")
