@@ -12,6 +12,7 @@ Example run:
 ? 2_3/8 + 9/8
  = 3_1/2
 
-# return integer first
-# look into % (modular) for fraction
-# remainder/denominator
+Hint:
+return integer first
+look into % (modular) for fraction
+remainder/denominator
