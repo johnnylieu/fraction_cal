@@ -39,80 +39,92 @@ def get_num1_and_num2():
         sum = str(sum)
         sum = sum.split("/")
         # print(f"sum: {sum}")
-        numerator = sum[0]
-        denominator = sum[1]
-        # print(f"numerator & denominator: {numerator} & {denominator}")
-        modular = int(numerator) % int(denominator)
-        # print(f"modular: {modular}")
-        if abs(int(numerator)) > abs(int(denominator)):
-            whole = int(numerator) / int(denominator)
-            whole = str(whole)
-            whole = whole.split(".")
-            whole = whole[0]
-            # print(f"whole: {whole}")
-            print(f"= {whole}_{modular}/{denominator}") # works
-        elif int(numerator) < int(denominator):
-            print(f"= {numerator}/{denominator}")
+        if len(sum) == 1:
+            print(sum[0])
+        else:
+            numerator = sum[0]
+            denominator = sum[1]
+            # print(f"numerator & denominator: {numerator} & {denominator}")
+            modular = int(numerator) % int(denominator)
+            # print(f"modular: {modular}")
+            if abs(int(numerator)) > abs(int(denominator)):
+                whole = int(numerator) / int(denominator)
+                whole = str(whole)
+                whole = whole.split(".")
+                whole = whole[0]
+                # print(f"whole: {whole}")
+                print(f"= {whole}_{modular}/{denominator}") # works
+            elif int(numerator) < int(denominator):
+                print(f"= {numerator}/{denominator}")
 
     if sys.argv[3] == "-":
         sum = num1 - num2
         sum = str(sum)
         sum = sum.split("/")
         # print(sum)
-        numerator = sum[0]
-        denominator = sum[1]
-        # print(numerator, denominator)
-        modular = int(numerator) % int(denominator)
-        # print(f"modular: {modular}")
-        if abs(int(numerator)) > abs(int(denominator)):
-            whole = int(numerator) / int(denominator)
-            whole = str(whole)
-            whole = whole.split(".")
-            whole = whole[0]
-            # print(f"whole: {whole}")
-            print(f"= {whole}_{modular}/{denominator}") # works
-        elif int(numerator) < int(denominator):
-            print(f"= {numerator}/{denominator}")
+        if len(sum) == 1:
+            print(sum[0])
+        else:
+            numerator = sum[0]
+            denominator = sum[1]
+            # print(f"numerator & denominator: {numerator} & {denominator}")
+            modular = int(numerator) % int(denominator)
+            # print(f"modular: {modular}")
+            if abs(int(numerator)) > abs(int(denominator)):
+                whole = int(numerator) / int(denominator)
+                whole = str(whole)
+                whole = whole.split(".")
+                whole = whole[0]
+                # print(f"whole: {whole}")
+                print(f"= {whole}_{modular}/{denominator}") # works
+            elif int(numerator) < int(denominator):
+                print(f"= {numerator}/{denominator}")
 
     if sys.argv[3] == "*":
         sum = num1 * num2
         sum = str(sum)
         sum = sum.split("/")
         # print(sum)
-        numerator = sum[0]
-        denominator = sum[1]
-        # print(numerator, denominator)
-        modular = int(numerator) % int(denominator)
-        # print(f"modular: {modular}")
-        if abs(int(numerator)) > abs(int(denominator)):
-            whole = int(numerator) / int(denominator)
-            whole = str(whole)
-            whole = whole.split(".")
-            whole = whole[0]
-            # print(f"whole: {whole}")
-            print(f"= {whole}_{modular}/{denominator}") # works    
-        elif int(numerator) < int(denominator):
-            print(f"= {numerator}/{denominator}")
+        if len(sum) == 1:
+            print(sum[0])
+        else:
+            numerator = sum[0]
+            denominator = sum[1]
+            # print(f"numerator & denominator: {numerator} & {denominator}")
+            modular = int(numerator) % int(denominator)
+            # print(f"modular: {modular}")
+            if abs(int(numerator)) > abs(int(denominator)):
+                whole = int(numerator) / int(denominator)
+                whole = str(whole)
+                whole = whole.split(".")
+                whole = whole[0]
+                # print(f"whole: {whole}")
+                print(f"= {whole}_{modular}/{denominator}") # works
+            elif int(numerator) < int(denominator):
+                print(f"= {numerator}/{denominator}")
 
     if sys.argv[3] == "/":
         sum = num1 / num2
         sum = str(sum)
         sum = sum.split("/")
         # print(sum)
-        numerator = sum[0]
-        denominator = sum[1]
-        # print(numerator, denominator)
-        modular = int(numerator) % int(denominator)
-        # print(f"modular: {modular}")
-        if int(numerator) > int(denominator):
-            whole = int(numerator) / int(denominator)
-            whole = str(whole)
-            whole = whole.split(".")
-            whole = whole[0]
-            # print(f"whole: {whole}")
-            print(f"= {whole}_{modular}/{denominator}") # works    
-        elif int(numerator) < int(denominator):
-            print(f"= {numerator}/{denominator}")
+        if len(sum) == 1:
+            print(sum[0])
+        else:
+            numerator = sum[0]
+            denominator = sum[1]
+            # print(f"numerator & denominator: {numerator} & {denominator}")
+            modular = int(numerator) % int(denominator)
+            # print(f"modular: {modular}")
+            if abs(int(numerator)) > abs(int(denominator)):
+                whole = int(numerator) / int(denominator)
+                whole = str(whole)
+                whole = whole.split(".")
+                whole = whole[0]
+                # print(f"whole: {whole}")
+                print(f"= {whole}_{modular}/{denominator}") # works
+            elif int(numerator) < int(denominator):
+                print(f"= {numerator}/{denominator}")
 
 def split(word):
     return [char for char in word]
