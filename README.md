@@ -34,25 +34,25 @@ remainder/denominator.
 
 -open your terminal
 
--run app in command line by typing this format: "* *python3 main.py ? a_number a_operand another_number* *"
+-run app in command line by typing this format: "python3 main.py ? a_number a_operand another_number"
 
 for example:
 
-"* *python3 main.py ? 1/2 * 3_3/4* *"
+"python3 main.py ? 1/2 * 3_3/4"
 
 or
 
-"* *python3 main.py ? 1 + 3* *"
+"python3 main.py ? 1 + 3"
 
--the app will return an answer in this format: "* *= whole_number _ numerator / denominator* *"
+-the app will return an answer in this format: "= whole_number _ numerator / denominator"
 
 for example:
-"* *python3 main.py ? 1/2 * 3_3/4* *" will return "* *= 1_7/8* *"
+"python3 main.py ? 1/2 * 3_3/4" will return "= 1_7/8"
 
 ![screen shot 1](https://raw.githubusercontent.com/johnnylieu/fraction_cal/main/screenshot1.bmp "screen shot 1")
 
 and
 
-"* *python3 main.py ? 1 + 3* *" will return "* *= 4* *"
+"python3 main.py ? 1 + 3" will return "= 4"
 
 ![screen shot 2](https://raw.githubusercontent.com/johnnylieu/fraction_cal/main/screenshot2.bmp "screen shot 2")
