@@ -14,15 +14,21 @@ num2_fraction = []
 def get_num1_and_num2():
     num1 = num1_fraction + num1_whole_number
     num1 = [x for x in num1 if x!= "0"]
-    # print(f"num1: {num1}")
-    num1 = Fraction(num1[0]) + Fraction(num1[1])
-    # print(f"num1: {num1}")
+    print(f"num1: {num1}")
+    if len(num1) == 1:
+        num1 = Fraction(num1[0]) + Fraction(0)
+    else:
+        num1 = Fraction(num1[0]) + Fraction(num1[1])
+    print(f"num1: {num1}")
 
     num2 = num2_fraction + num2_whole_number
     num2 = [x for x in num2 if x!= "0"]
-    # print(f"num1: {num2}")
-    num2 = Fraction(num2[0]) + Fraction(num2[1])
-    # print(f"num1: {num2}")
+    print(f"num1: {num2}")
+    if len(num2) == 1:
+        num2 = Fraction(num2[0]) + Fraction(0)
+    else:
+        num2 = Fraction(num2[0]) + Fraction(num2[1])
+    print(f"num1: {num2}")
 
     if sys.argv[3] == "+":
         sum = num1 + num2
