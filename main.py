@@ -37,87 +37,116 @@ num1_whole_number = []
 num1_fraction = []
 
 num2_whole_number = []
-num1_fraction = []
+num2_fraction = []
 
-def is_it_operator(item):
-    is_operator = False
-    if item == '+' or item == '-' or item == '*' or item == '/':
-        is_operator = True
-    print(f"{item} is an operator: {is_operator}")
+def add():
+    if sys.argv[3] == "+":
+        sum = Fraction((num1_fraction + num1_whole_number) +(num2_whole_number + num2_fraction))
+        print(f"= {sum}")
+
+# def is_it_operator(item):
+#     is_operator = False
+#     if item == '+' or item == '-' or item == '*' or item == '/':
+#         is_operator = True
+#     print(f"{item} is an operator: {is_operator}")
 
 def split(word):
     return [char for char in word]
 
 def get_fract1(fract1):
     fract1 = split(fract1)
-    print(f"fract1: {fract1}") # works
+    # print(f"fract1: {fract1}") # works
     for i,x in enumerate(fract1):
         if fract1[i] == "/":
             fraction1 = fract1[i-1] + "/" + fract1[i+1]
-            print(f"fraction1: {fraction1}") # works
+            # print(f"fraction1: {fraction1}") # works
             num1_fraction.append(fraction1)
-            print(f"num1 fraction: {num1_fraction}") # works
+            # print(f"num1 fraction: {num1_fraction}") # works
 
 def get_fract2(fract2):
     fract2 = split(fract2)
-    print(f"fract2: {fract2}") # works
+    # print(f"fract2: {fract2}") # works
     for i,x in enumerate(fract2):
         if fract2[i] == "/":
             fraction1 = fract2[i-1] + "/" + fract2[i+1]
-            print(f"fraction1: {fraction1}") # works
-            num1_fraction.append(fraction1)
-            print(f"num1 fraction: {num1_fraction}") # works
+            # print(f"fraction1: {fraction1}") # works
+            num2_fraction.append(fraction1)
+            # print(f"num2 fraction: {num2_fraction}") # works
 
 
 def get_num1(num1):
     num1 = split(num1)
-    print(f"num1: {num1}")
+    # print(f"num1: {num1}")
     for i,x in enumerate(num1):
         if num1[i] == "_":
             whole_number = num1[i-1]
-            print(f"whole number: {whole_number}")
+            # print(f"whole number: {whole_number}")
             num1_whole_number.append(whole_number)
-            print(f"whole_num1: {num1_whole_number}")
+            # print(f"whole_num1: {num1_whole_number}")
         else:
             num1_whole_number.append("0")
             print(f"whole_num1: {num1_whole_number}")
 
 def get_num2(num2):
     num2 = split(num2)
-    print(f"num2: {num2}")
+    # print(f"num1: {num2}")
     for i,x in enumerate(num2):
         if num2[i] == "_":
             whole_number = num2[i-1]
-            print(f"whole number: {whole_number}")
+            # print(f"whole number: {whole_number}")
             num2_whole_number.append(whole_number)
-            print(f"whole_num1: {num2_whole_number}")
+            # print(f"whole_num2: {num2_whole_number}")
         else:
-            num2_whole_number.append("0")
-            print(f"whole_num2: {num2_whole_number}")
+            num1_whole_number.append("0")
+            print(f"whole_num1: {num1_whole_number}")
 
-def total(num1, num2, operand):
-    is_it_operator(operand)
-    if operand == "+":
-        return float(num1) + float(num2)
-    elif operand == "-":
-        return float(num1) - float(num2)
-    elif operand == "*":
-        return float(num1) * float(num2)
-    elif operand == "/":
-        return float(num1) / float(num2)
+# if __name__ == "__main__":
+#     get_num1(sys.argv[2])
+#     get_num2(sys.argv[4])
+#     get_fract1(sys.argv[2])
+#     get_fract2(sys.argv[4])
 
-def loop(item):
-    sum = 0.0
-    sum_list = []
-    for i in range(len(item)-1):
-        print(item[i])
-        if is_it_operator(item[i]) == None:
-            sum_list.append(item[i])
-            # print(sum_list)
-            sum = float(sum) + float(item[i])
-        elif is_it_operator(item[i]) == True:
-            continue
-    print(f"sum: {sum}")
+#     if sys.argv[3] == "+":
+#         add()
+
+
+
+# def get_num2(num2):
+#     num2 = split(num2)
+#     print(f"num2: {num2}")
+#     for i,x in enumerate(num2):
+#         if num2[i] == "_":
+#             whole_number = num2[i-1]
+#             print(f"whole number: {whole_number}")
+#             num2_whole_number.append(whole_number)
+#             print(f"whole_num1: {num2_whole_number}")
+#         else:
+#             num2_whole_number.append("0")
+#             print(f"whole_num2: {num2_whole_number}")
+
+# def total(num1, num2, operand):
+#     is_it_operator(operand)
+#     if operand == "+":
+#         return float(num1) + float(num2)
+#     elif operand == "-":
+#         return float(num1) - float(num2)
+#     elif operand == "*":
+#         return float(num1) * float(num2)
+#     elif operand == "/":
+#         return float(num1) / float(num2)
+
+# def loop(item):
+#     sum = 0.0
+#     sum_list = []
+#     for i in range(len(item)-1):
+#         print(item[i])
+#         if is_it_operator(item[i]) == None:
+#             sum_list.append(item[i])
+#             # print(sum_list)
+#             sum = float(sum) + float(item[i])
+#         elif is_it_operator(item[i]) == True:
+#             continue
+#     print(f"sum: {sum}")
 
 # input = ["3.9", "2.1", "+"]
 # loop(input)
