@@ -1,5 +1,4 @@
 import unittest
-from fractions import *
 from main import get_num1, get_num2, num1_whole_number, num2_whole_number
 
 class Test(unittest.TestCase):
