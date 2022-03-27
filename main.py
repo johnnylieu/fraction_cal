@@ -39,12 +39,23 @@ num1_fraction = []
 num2_whole_number = []
 num2_fraction = []
 
-def add():
-    num1 = Fraction(num1_whole_number) + Fraction(num1_fraction)
+def get_num1_and_num2():
+    num1 = num1_fraction + num1_whole_number
+    num1 = [x for x in num1 if x!= "0"]
     print(f"num1: {num1}")
-    num2 = Fraction(num2_whole_number) + Fraction(num2_fraction)
-    print(f"num2: {num2}")
-    # print(f"= {sum}")
+    num1 = Fraction(num1[0]) + Fraction(num1[1])
+    print(f"num1: {num1}")
+
+    num2 = num2_fraction + num2_whole_number
+    num2 = [x for x in num2 if x!= "0"]
+    print(f"num1: {num2}")
+    num2 = Fraction(num2[0]) + Fraction(num2[1])
+    print(f"num1: {num2}")
+
+    if sys.argv[3] == "+":
+        sum = num1 + num2
+        sum = Fraction(sum)
+        print(f"= {sum}") # works
 
 def is_it_operator(item):
     is_operator = False
@@ -107,8 +118,7 @@ if __name__ == "__main__":
     get_fract1(sys.argv[2])
     get_fract2(sys.argv[4])
 
-    if sys.argv[3] == "+":
-        add()
+    get_num1_and_num2()
 
 
 
