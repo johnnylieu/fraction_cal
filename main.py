@@ -50,8 +50,9 @@ def get_num1_and_num2():
             whole = whole.split(".")
             whole = whole[0]
             print(f"whole: {whole}")
-        # print(f"modular: {modular}")
-        print(f"= {whole}_{modular}/{denominator}") # works
+            print(f"= {whole}_{modular}/{denominator}") # works
+        elif int(numerator) < int(denominator):
+            print(f"= {numerator}/{denominator}")
 
     if sys.argv[3] == "-":
         sum = num1 - num2
@@ -69,8 +70,9 @@ def get_num1_and_num2():
             whole = whole.split(".")
             whole = whole[0]
             print(f"whole: {whole}")
-        # print(f"modular: {modular}")
-        print(f"= {whole}_{modular}/{denominator}") # works
+            print(f"= {whole}_{modular}/{denominator}") # works
+        elif int(numerator) < int(denominator):
+            print(f"= {numerator}/{denominator}")
 
     if sys.argv[3] == "*":
         sum = num1 * num2
@@ -88,8 +90,9 @@ def get_num1_and_num2():
             whole = whole.split(".")
             whole = whole[0]
             print(f"whole: {whole}")
-        # print(f"modular: {modular}")
-        print(f"= {whole}_{modular}/{denominator}") # works        
+            print(f"= {whole}_{modular}/{denominator}") # works    
+        elif int(numerator) < int(denominator):
+            print(f"= {numerator}/{denominator}")
 
     if sys.argv[3] == "/":
         sum = num1 / num2
@@ -107,8 +110,9 @@ def get_num1_and_num2():
             whole = whole.split(".")
             whole = whole[0]
             print(f"whole: {whole}")
-        print(f"modular: {modular}")
-        print(f"= {whole}_{modular}/{denominator}") # works      
+            print(f"= {whole}_{modular}/{denominator}") # works    
+        elif int(numerator) < int(denominator):
+            print(f"= {numerator}/{denominator}")
 
 def split(word):
     return [char for char in word]
