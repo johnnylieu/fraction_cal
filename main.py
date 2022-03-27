@@ -54,7 +54,6 @@ def get_num1_and_num2():
 
     if sys.argv[3] == "+":
         sum = num1 + num2
-        sum = Fraction(sum)
         print(f"= {sum}") # works
 
 def is_it_operator(item):
