@@ -168,11 +168,11 @@ def get_num1(num1):
                 # print(f"whole_num1: {num1_whole_number}")
 
 def get_num2(num2):
-    print(f"length of num2: {len(num2)}")
-    print(num2)
+    # print(f"length of num2: {len(num2)}")
+    # print(num2)
     if len(num2) == 1:
         num2_whole_number.append(num2[0])
-        print(f"num2 whole number: {num2_whole_number}")
+        # print(f"num2 whole number: {num2_whole_number}")
     else:
         num2 = split(num2)
         # print(f"num1: {num2}")
