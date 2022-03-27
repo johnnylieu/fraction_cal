@@ -44,7 +44,7 @@ def get_num1_and_num2():
         print(f"numerator & denominator: {numerator} & {denominator}")
         modular = int(numerator) % int(denominator)
         print(f"modular: {modular}")
-        if int(numerator) > int(denominator):
+        if abs(int(numerator)) > abs(int(denominator)):
             whole = int(numerator) / int(denominator)
             whole = str(whole)
             whole = whole.split(".")
@@ -64,7 +64,7 @@ def get_num1_and_num2():
         print(numerator, denominator)
         modular = int(numerator) % int(denominator)
         print(f"modular: {modular}")
-        if int(numerator) > int(denominator):
+        if abs(int(numerator)) > abs(int(denominator)):
             whole = int(numerator) / int(denominator)
             whole = str(whole)
             whole = whole.split(".")
@@ -84,7 +84,7 @@ def get_num1_and_num2():
         print(numerator, denominator)
         modular = int(numerator) % int(denominator)
         print(f"modular: {modular}")
-        if int(numerator) > int(denominator):
+        if abs(int(numerator)) > abs(int(denominator)):
             whole = int(numerator) / int(denominator)
             whole = str(whole)
             whole = whole.split(".")
