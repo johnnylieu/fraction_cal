@@ -17,6 +17,8 @@ def get_num1_and_num2():
     print(f"num1: {num1}")
     if len(num1) == 1:
         num1 = Fraction(num1[0]) + Fraction(0)
+    elif len(num1) == 0:
+        num1 = Fraction("0")
     else:
         num1 = Fraction(num1[0]) + Fraction(num1[1])
     print(f"num1: {num1}")
@@ -71,7 +73,7 @@ def get_fract2(fract2):
 
 def get_num1(num1):
     num1 = split(num1)
-    # print(f"num1: {num1}")
+    print(f"num1: {num1}")
     for i,x in enumerate(num1):
         if num1[i] == "_":
             whole_number = num1[i-1]
@@ -79,8 +81,8 @@ def get_num1(num1):
             num1_whole_number.append(whole_number)
             # print(f"whole_num1: {num1_whole_number}")
         else:
-            num1_whole_number.append("0")
-            # print(f"whole_num1: {num1_whole_number}")
+            num1_whole_number.append(sys.argv[2])
+            # print(f"whole_num2: {num2_whole_number}")
 
 def get_num2(num2):
     num2 = split(num2)
@@ -92,7 +94,7 @@ def get_num2(num2):
             num2_whole_number.append(whole_number)
             # print(f"whole_num2: {num2_whole_number}")
         else:
-            num1_whole_number.append("0")
+            num2_whole_number.append(sys.argv[4])
             # print(f"whole_num2: {num2_whole_number}")
 
 if __name__ == "__main__":
