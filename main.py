@@ -40,7 +40,7 @@ def get_num1_and_num2():
         sum = sum.split("/")
         # print(f"sum: {sum}")
         if len(sum) == 1:
-            print(sum[0])
+            print(f"= {sum[0]}")
         else:
             numerator = sum[0]
             denominator = sum[1]
@@ -63,7 +63,7 @@ def get_num1_and_num2():
         sum = sum.split("/")
         # print(sum)
         if len(sum) == 1:
-            print(sum[0])
+            print(f"= {sum[0]}")
         else:
             numerator = sum[0]
             denominator = sum[1]
@@ -86,7 +86,7 @@ def get_num1_and_num2():
         sum = sum.split("/")
         # print(sum)
         if len(sum) == 1:
-            print(sum[0])
+            print(f"= {sum[0]}")
         else:
             numerator = sum[0]
             denominator = sum[1]
@@ -109,7 +109,7 @@ def get_num1_and_num2():
         sum = sum.split("/")
         # print(sum)
         if len(sum) == 1:
-            print(sum[0])
+            print(f"= {sum[0]}")
         else:
             numerator = sum[0]
             denominator = sum[1]
