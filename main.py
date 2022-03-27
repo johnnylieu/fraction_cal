@@ -56,6 +56,18 @@ def get_num1_and_num2():
         sum = num1 + num2
         print(f"= {sum}") # works
 
+    if sys.argv[3] == "-":
+        sum = num1 - num2
+        print(f"= {sum}") # works
+
+    if sys.argv[3] == "*":
+        sum = num1 * num2
+        print(f"= {sum}") # works
+
+    if sys.argv[3] == "/":
+        sum = num1 / num2
+        print(f"= {sum}") # works
+
 def is_it_operator(item):
     is_operator = False
     if item == '+' or item == '-' or item == '*' or item == '/':
