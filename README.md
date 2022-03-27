@@ -44,7 +44,7 @@ or
 
 "python3 main.py ? 1 + 3"
 
--the app will return an answer in this format: "= whole_number _ numerator / denominator"
+-the app will return an answer in this format: "= integer _ numerator / denominator"
 
 for example:
 "python3 main.py ? 1/2 * 3_3/4" will return "= 1_7/8"
