@@ -22,8 +22,6 @@ from operator import *
 # help(operator)
 # dir(operator)
 
-input = ["3.9", "+", "6.8", "-", "1.3"]
-
 def is_it_operator(item):
     is_operator = False
     if item == '+' or item == '-' or item == '*' or item == '/':
