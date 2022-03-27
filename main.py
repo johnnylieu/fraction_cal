@@ -24,7 +24,7 @@ def get_num1_and_num2():
 
     num2 = num2_fraction + num2_whole_number
     num2 = [x for x in num2 if x!= "0"]
-    print(f"num2: {num2}")
+    # print(f"num2: {num2}")
     if len(num2) == 1:
         num2 = Fraction(num2[0]) + Fraction(0)
     else:
@@ -155,7 +155,7 @@ def get_num1(num1):
         # print(f"num1 whole number: {num1_whole_number}")
     else:
         num1 = split(num1)
-        print(f"num1: {num1}")
+        # print(f"num1: {num1}")
         for i,x in enumerate(num1):
             if num1[i] == "_":
                 whole_number = num1[i-1]
