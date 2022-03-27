@@ -48,6 +48,27 @@ def is_it_operator(item):
 def split(word):
     return [char for char in word]
 
+def get_fract1(fract1):
+    fract1 = split(fract1)
+    print(f"fract1: {fract1}") # works
+    for i,x in enumerate(fract1):
+        if fract1[i] == "/":
+            fraction1 = fract1[i-1] + "/" + fract1[i+1]
+            print(f"fraction1: {fraction1}") # works
+            num1_fraction.append(fraction1)
+            print(f"num1 fraction: {num1_fraction}") # works
+
+def get_fract2(fract2):
+    fract2 = split(fract2)
+    print(f"fract2: {fract2}") # works
+    for i,x in enumerate(fract2):
+        if fract2[i] == "/":
+            fraction1 = fract2[i-1] + "/" + fract2[i+1]
+            print(f"fraction1: {fraction1}") # works
+            num1_fraction.append(fraction1)
+            print(f"num1 fraction: {num1_fraction}") # works
+
+
 def get_num1(num1):
     num1 = split(num1)
     print(f"num1: {num1}")
@@ -97,8 +118,6 @@ def loop(item):
         elif is_it_operator(item[i]) == True:
             continue
     print(f"sum: {sum}")
-
-get_num1(sys.argv[2])
 
 # input = ["3.9", "2.1", "+"]
 # loop(input)
