@@ -34,7 +34,18 @@ def get_num1_and_num2():
 
     if sys.argv[3] == "+":
         sum = num1 + num2
-        print(f"= {sum}") # works
+        sum = str(sum)
+        sum = sum.split("/")
+        print(f"sum: {sum}")
+        numerator = sum[0]
+        denominator = sum[1]
+        print(numerator, denominator)
+        modular = int(numerator) % int(denominator)
+        if numerator > denominator:
+            whole = int(numerator) - (int(modular) * int(denominator))
+            print(f"whole: {whole}")
+        print(f"modular: {modular}")
+        print(f"= {whole}_{modular}/{denominator}") # works
 
     if sys.argv[3] == "-":
         sum = num1 - num2
