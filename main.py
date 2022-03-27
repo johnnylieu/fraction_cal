@@ -44,13 +44,13 @@ def get_num1_and_num2():
     num1 = [x for x in num1 if x!= "0"]
     print(f"num1: {num1}")
     num1 = Fraction(num1[0]) + Fraction(num1[1])
-    print(f"num1: {num1}")
+    # print(f"num1: {num1}")
 
     num2 = num2_fraction + num2_whole_number
     num2 = [x for x in num2 if x!= "0"]
     print(f"num1: {num2}")
     num2 = Fraction(num2[0]) + Fraction(num2[1])
-    print(f"num1: {num2}")
+    # print(f"num1: {num2}")
 
     if sys.argv[3] == "+":
         sum = num1 + num2
@@ -67,12 +67,6 @@ def get_num1_and_num2():
     if sys.argv[3] == "/":
         sum = num1 / num2
         print(f"= {sum}") # works
-
-def is_it_operator(item):
-    is_operator = False
-    if item == '+' or item == '-' or item == '*' or item == '/':
-        is_operator = True
-    print(f"{item} is an operator: {is_operator}")
 
 def split(word):
     return [char for char in word]
@@ -128,66 +122,4 @@ if __name__ == "__main__":
     get_num2(sys.argv[4])
     get_fract1(sys.argv[2])
     get_fract2(sys.argv[4])
-
     get_num1_and_num2()
-
-
-
-# def get_num2(num2):
-#     num2 = split(num2)
-#     print(f"num2: {num2}")
-#     for i,x in enumerate(num2):
-#         if num2[i] == "_":
-#             whole_number = num2[i-1]
-#             print(f"whole number: {whole_number}")
-#             num2_whole_number.append(whole_number)
-#             print(f"whole_num1: {num2_whole_number}")
-#         else:
-#             num2_whole_number.append("0")
-#             print(f"whole_num2: {num2_whole_number}")
-
-# def total(num1, num2, operand):
-#     is_it_operator(operand)
-#     if operand == "+":
-#         return float(num1) + float(num2)
-#     elif operand == "-":
-#         return float(num1) - float(num2)
-#     elif operand == "*":
-#         return float(num1) * float(num2)
-#     elif operand == "/":
-#         return float(num1) / float(num2)
-
-# def loop(item):
-#     sum = 0.0
-#     sum_list = []
-#     for i in range(len(item)-1):
-#         print(item[i])
-#         if is_it_operator(item[i]) == None:
-#             sum_list.append(item[i])
-#             # print(sum_list)
-#             sum = float(sum) + float(item[i])
-#         elif is_it_operator(item[i]) == True:
-#             continue
-#     print(f"sum: {sum}")
-
-# input = ["3.9", "2.1", "+"]
-# loop(input)
-
-# print(total("3.9", "2.1", "+"))
-# print(total("2.1", "3.9", "-"))
-# print(total("4", "12", "*"))
-# print(total("12", "4", "/"))
-# print(total("12", "4", "4"))
-
-# is_it_operator("+")
-# is_it_operator("-")
-# is_it_operator("*")
-# is_it_operator("/")
-# is_it_operator("4")
-
-
-    # print(f"sys argvs: {sys.argv}") # works
-    # is_operator = False
-    # if sys.argv[3] == '+' or sys.argv[3] == '-' or sys.argv[3] == '*' or sys.argv[3] == '/':
-    #     is_operator = True
-    # print(is_operator)
