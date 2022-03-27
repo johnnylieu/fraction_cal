@@ -46,8 +46,6 @@ def total(num1, num2, op):
         print(f"the division is: {div}")
     elif op != "+" or op != "-" or op != "*" or op != "/":
         print(f"Please choose a valid operand (+, *, -, /)")
-    else:
-        pass
 
 # is_it_operator()
 total("3.9", "2.1", "+")
