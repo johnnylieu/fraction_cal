@@ -49,6 +49,10 @@ or
 for example:
 "* *python3 main.py ? 1/2 * 3_3/4* *" will return "* *= 1_7/8* *"
 
+![screen shot 1](https://raw.githubusercontent.com/johnnylieu/fraction_cal/main/screenshot1.bmp "screen shot 1")
+
 and
 
 "* *python3 main.py ? 1 + 3* *" will return "* *= 4* *"
+
+![screen shot 2](https://raw.githubusercontent.com/johnnylieu/fraction_cal/main/screenshot2.bmp "screen shot 2")
