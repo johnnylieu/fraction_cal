@@ -20,6 +20,7 @@ from ast import operator
 from fractions import *
 from operator import *
 from operator import *
+from os import times
 # help(operator)
 # dir(operator)
 
@@ -31,20 +32,20 @@ def is_it_operator(item):
         is_operator = True
     print(f"{item} is an operator: {is_operator}")
 
-def total(num1, num2, op):
+def total(num1, num2, operand):
     if op == "+":
         sum = float(num1) + float(num2)
         print(f"the sum is: {sum}")
-    elif op == "-":
-        diff = float(num1) - float(num2)
-        print(f"the diff is: {diff}")
-    elif op == "*":
-        mult = float(num1) * float(num2)
-        print(f"the multiplicatio is: {mult}")
-    elif op == "/":
-        div = float(num1) / float(num2)
-        print(f"the division is: {div}")
-    elif op != "+" or op != "-" or op != "*" or op != "/":
+    elif operand == "-":
+        difference = float(num1) - float(num2)
+        print(f"the diff is: {difference}")
+    elif operand == "*":
+        times = float(num1) * float(num2)
+        print(f"the times is: {times}")
+    elif operand == "/":
+        dividend = float(num1) / float(num2)
+        print(f"the dividend is: {dividend}")
+    elif operand != "+" or op != "-" or op != "*" or op != "/":
         print(f"Please choose a valid operand (+, *, -, /)")
 
 # is_it_operator()
