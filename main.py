@@ -26,12 +26,53 @@ import sys
 # Now is the time you write the loop to go through each item
 # Here is a hint. Initialize a variable `sum` to 0.0. Start iterating from the beginning. Check if it is a num. Reuse the function here. If it is an operator, you can continue
 # Otherwise, if it is a number, do total(sum, the number at the current index, operation at index - 1)
+# So after you complete the step you're on right now, most of the problem is solved
+# You just now need to parse the input
+# Search "python string split"
+# You need to not split operators. When it is a number, first split by "_", then by "/"
+# Convert the number from mixed fractions to decimal numbers
+# Also, for the solution, you need to convert decimal back to mixed fraction
+
+num1_whole_number = []
+num1_fraction = []
+
+num2_whole_number = []
+num1_fraction = []
 
 def is_it_operator(item):
     is_operator = False
     if item == '+' or item == '-' or item == '*' or item == '/':
         is_operator = True
     print(f"{item} is an operator: {is_operator}")
+
+def split(word):
+    return [char for char in word]
+
+def get_num1(num1):
+    num1 = split(num1)
+    print(f"num1: {num1}")
+    for i,x in enumerate(num1):
+        if num1[i] == "_":
+            whole_number = num1[i-1]
+            print(f"whole number: {whole_number}")
+            num1_whole_number.append(whole_number)
+            print(f"whole_num1: {num1_whole_number}")
+        else:
+            num1_whole_number.append("0")
+            print(f"whole_num1: {num1_whole_number}")
+
+def get_num2(num2):
+    num2 = split(num2)
+    print(f"num2: {num2}")
+    for i,x in enumerate(num2):
+        if num2[i] == "_":
+            whole_number = num2[i-1]
+            print(f"whole number: {whole_number}")
+            num2_whole_number.append(whole_number)
+            print(f"whole_num1: {num2_whole_number}")
+        else:
+            num2_whole_number.append("0")
+            print(f"whole_num2: {num2_whole_number}")
 
 def total(num1, num2, operand):
     is_it_operator(operand)
@@ -51,15 +92,16 @@ def loop(item):
         print(item[i])
         if is_it_operator(item[i]) == None:
             sum_list.append(item[i])
-            print(sum_list)
+            # print(sum_list)
             sum = float(sum) + float(item[i])
         elif is_it_operator(item[i]) == True:
             continue
     print(f"sum: {sum}")
 
-# input = ["3.9", "+", "6.8", "-", "1.3"]
-input = ["3.9", "2.1", "+"]
-loop(input)
+get_num1(sys.argv[2])
+
+# input = ["3.9", "2.1", "+"]
+# loop(input)
 
 # print(total("3.9", "2.1", "+"))
 # print(total("2.1", "3.9", "-"))
