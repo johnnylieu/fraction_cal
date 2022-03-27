@@ -30,26 +30,22 @@ def is_it_operator(item):
 
 def total(num1, num2, operand):
     if operand == "+":
-        sum = float(num1) + float(num2)
-        print(f"the sum is: {sum}")
+        return float(num1) + float(num2)
     elif operand == "-":
-        difference = float(num1) - float(num2)
-        print(f"the difference is: {difference}")
+        return float(num1) - float(num2)
     elif operand == "*":
-        times = float(num1) * float(num2)
-        print(f"the times is: {times}")
+        return float(num1) * float(num2)
     elif operand == "/":
-        division = float(num1) / float(num2)
-        print(f"the division is: {division}")
+        return float(num1) / float(num2)
     elif operand != "+" or operand != "-" or operand != "*" or operand != "/":
-        print(f"Please choose a valid operand (+, *, -, /)")
+        return(f"Please choose a valid operand (+, *, -, /)")
 
 # is_it_operator()
-total("3.9", "2.1", "+")
-total("2.1", "3.9", "-")
-total("4", "12", "*")
-total("12", "4", "/")
-total("12", "4", "4")
+print(total("3.9", "2.1", "+"))
+print(total("2.1", "3.9", "-"))
+print(total("4", "12", "*"))
+print(total("12", "4", "/"))
+print(total("12", "4", "4"))
 
     # print(f"sys argvs: {sys.argv}") # works
     # is_operator = False
