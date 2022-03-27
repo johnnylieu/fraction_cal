@@ -53,9 +53,9 @@ def loop(item):
             sum_list.append(item[i])
             print(sum_list)
             sum = float(sum) + float(item[i])
-            print(f"sum: {sum}")
         elif is_it_operator(item[i]) == True:
             continue
+    print(f"sum: {sum}")
 
 # input = ["3.9", "+", "6.8", "-", "1.3"]
 input = ["3.9", "2.1", "+"]
