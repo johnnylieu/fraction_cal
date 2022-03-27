@@ -33,7 +33,7 @@ def is_it_operator(item):
     print(f"{item} is an operator: {is_operator}")
 
 def total(num1, num2, operand):
-    if op == "+":
+    if operand == "+":
         sum = float(num1) + float(num2)
         print(f"the sum is: {sum}")
     elif operand == "-":
