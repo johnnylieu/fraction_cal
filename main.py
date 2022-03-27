@@ -148,22 +148,22 @@ def get_fract2(fract2):
             # print(f"num2 fraction: {num2_fraction}") # works
 
 def get_num1(num1):
-    # print(f"length of num1: {len(num1)}")
+    print(f"length of num1: {len(num1)}")
     if len(num1) == 1:
         num1_whole_number.append(num1[0])
-        # print(f"num1 whole number: {num1_whole_number}")
+        print(f"num1 whole number: {num1_whole_number}")
     else:
         num1 = split(num1)
-        # print(f"num1: {num1}")
+        print(f"num1: {num1}")
         for i,x in enumerate(num1):
             if num1[i] == "_":
                 whole_number = num1[i-1]
-                # print(f"whole number: {whole_number}")
+                print(f"whole number: {whole_number}")
                 num1_whole_number.append(whole_number)
-                # print(f"whole_num1: {num1_whole_number}")
+                print(f"whole_num1: {num1_whole_number}")
             elif num1[i] != "_" and num1[i]!= "/":
                 num1_whole_number.append("0")
-                # print(f"whole_num1: {num1_whole_number}")
+                print(f"whole_num1: {num1_whole_number}")
 
 def get_num2(num2):
     # print(f"length of num2: {len(num2)}")
