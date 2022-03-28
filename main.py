@@ -187,6 +187,11 @@ def get_num2(num2):
 if __name__ == "__main__":
     get_num1(sys.argv[2])
     get_num2(sys.argv[4])
+    # these top two functions get the whole numbers if there are any
     get_fract1(sys.argv[2])
     get_fract2(sys.argv[4])
+    #these top two functions get the fractions if there are any
     get_num1_and_num2()
+    # this last function totals the first fraction and whole number
+    # then the second fraction and second whole number
+    # then checks the operand to perform the appropriate task (+ * / -)
