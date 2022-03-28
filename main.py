@@ -193,5 +193,5 @@ if __name__ == "__main__":
     #these top two functions get the fractions if there are any
     get_num1_and_num2()
     # this last function totals the first fraction and whole number
-    # then the second fraction and second whole number
+    # then totals the second fraction and second whole number
     # then checks the operand to perform the appropriate task (+ * / -)
